@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.scss';
@@ -6,23 +6,6 @@ import SocialMediaIcon from '../../shared/components/SocialMediaIcon';
 
 const Navbar = ({ socialMedia }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,7 +16,7 @@ const Navbar = ({ socialMedia }) => {
   };
   
   return (
-    <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+    <header className="navbar">
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="logo" onClick={closeMenu}>

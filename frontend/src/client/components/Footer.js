@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 import SocialMediaIcon from '../../shared/components/SocialMediaIcon';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
 
 const Footer = ({ socialMedia }) => {
   const year = new Date().getFullYear();
@@ -20,22 +20,17 @@ const Footer = ({ socialMedia }) => {
             
             <div className="contact-item">
               <Phone size={18} />
-              <span>+62 812 3456 7890</span>
+              <span>+62 857-1355-5331</span>
             </div>
             
             <div className="contact-item">
-              <Mail size={18} />
-              <span>info@bumimerapi.com</span>
+              <Instagram size={18} />
+              <span>@tanamerapimovement</span>
             </div>
             
             <div className="contact-item">
-              <MapPin size={18} />
-              <span>Jl. Kaliurang Km. 25, Yogyakarta</span>
-            </div>
-            
-            <div className="contact-item">
-              <Clock size={18} />
-              <span>Setiap hari: 08.00 - 17.00 WIB</span>
+              <MapPin size={23} />
+              <span>Balerante, Kec. Kemalang, Kabupaten Klaten, Jawa Tengah</span>
             </div>
           </div>
           
@@ -51,7 +46,6 @@ const Footer = ({ socialMedia }) => {
           </div>
           
           <div className="footer-social">
-            <h3 className="footer-title">Ikuti Kami</h3>
             <div className="social-icons">
               {socialMedia.map((social) => (
                 <SocialMediaIcon 
